@@ -1,0 +1,23 @@
+<div class="containerProyecto" *ngIf="project">
+    <h1>{{project.name}}</h1><hr><br>
+    <h3><span class="tituloProyecto">Categoría del proyecto:</span> {{project.category}}</h3><br>
+    <p><span class="tituloProyecto">Descripción del proyecto:</span> {{project.description}}</p><br>
+    <p><span class="tituloProyecto">Año de realización del proyecto: </span>{{project.year}}</p><br>
+    <p><span class="tituloProyecto">Lenguajes utilizados:</span> {{project.langs}}</p>
+</div>
+<div id="botones" *ngIf="project">
+<p *ngIf="confirm == false">    
+    <a [routerLink]="['/editar-proyecto', project._id]" class="botonEditar">Editar</a>
+    <a (click)="setConfirm(true)" class="botonBorrar">Borrar</a>
+</p>
+</div>
+<div id="botones" *ngIf="confirm == true">
+    <p>¿Estás seguro?</p>
+    <p >  
+        <a (click)="setConfirm(false)" class="botonEditar"><strong>CANCELAR</strong></a>
+        <a (click)="deleteProject(project._id)" class="botonBorrar">Confirmar</a>
+    </p>
+    </div>
+<div><h1 class="tituloWeb">¡Gracias por usar nuestra Web para guardar sus proyectos!</h1></div>
+
+

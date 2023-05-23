@@ -1,0 +1,324 @@
+
+
+/* Importamos fuentes*/
+
+@font-face {
+    font-family: "yanone";
+    src: url("../fonts/YanoneKaffeesatz-Regular.ttf");
+}
+@font-face {
+    font-family: "finger";
+    src: url("../fonts/FingerPaint-Regular.ttf");
+}
+
+
+/* Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-size: 18px;
+    background: url("../img/fondo3.jpg");
+    width: 100%;
+}
+/* Estilos logo*/
+.logo{
+    font-family: "finger";
+    font-size: 35px;
+    transition: color 500ms, transform 500ms;
+}
+.logo :hover{
+    font-size: 40px;
+    background: transparent;
+    color: black;
+    transition: 500ms;
+}
+
+/* Estilos nav*/
+header {
+    background-color: #177c7c; /* Color de fondo del menú */
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    text-transform: uppercase;
+}
+header ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Alinea los elementos del menú */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    height: 100%;
+    width: 40%;
+}
+header li {
+    display: inline-block;
+}
+header a {
+    color: #fff; /* Color del texto del menú */
+    text-decoration: none;
+    padding: 10px 20px; /* Espacio alrededor del texto del menú */
+    border-radius: 10px;
+}
+header a:hover, .activated {
+    background-color: #49a5a5; /* Color de fondo cuando se pasa el cursor sobre el enlace */
+}
+/* Estilos contenedor principal*/
+#content {
+    min-height: 700px;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px rgb(161, 161, 102);
+    background-color: beige;
+    padding-top: 120px;
+}
+/* Estilos footer*/
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgb(0, 0,0,0.7);
+    background-color: #177c7c;
+    text-align: center;
+    padding-bottom: 10px;
+    border-top: 2px solid rgb(58, 187, 180);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+/* Estilos sobre mi*/
+#title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+#title h1{
+font-family: "finger";
+color: #177c7c;
+font-size: 45px;
+border-bottom: 1px solid black;
+padding-bottom: 5px;
+}
+#title h2{
+    font-size: 30px;
+    color: #17a7a7;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+#title img{
+    width: 180px;
+    border-radius: 10px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+#title img:hover{
+    opacity: 1;
+    width: 180px;
+    border-radius: 10px;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+article.sobremi{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.sobremi h2{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.sobremi p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+/* Estilos crearProyecto*/
+.container {
+    background-color: #177c7c;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+}
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+    text-align: center;
+ }
+.container form {
+    margin-bottom: 0;
+    text-align: center;
+}
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+.container input[type="text"],
+.container input[type="email"],
+.container textarea,
+.container input[type="number"],
+.container input[type="file"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    margin: 0px auto;
+    text-align: center;
+}
+.container input[type="submit"] {
+    background-color: #49a5a5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+.container input[disabled] {
+opacity: 0.4;
+cursor: not-allowed;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #105c5c;
+    text-align: center;
+}
+/* Estilos error formulario */
+.errorFormulario{
+    color: black;
+    background-color: rgba(218, 47, 47,0.8);
+    padding: 2px;
+}
+.success{
+    padding: 5px;
+    border: 3px dashed rgb(92, 250, 0);
+    text-align: center;
+    background-color:aqua;
+    color: black;
+    width: 75%;
+    margin: 0px auto;
+}
+.fail{
+    padding: 5px;
+    border: 3px dashed rgb(252, 8, 0);
+    text-align: center;
+    background-color:rgb(4, 90, 90);
+    color: black;
+    width: 75%;
+    margin: 0px auto;
+}
+/*Estilos pagina proyectos*/
+.project{
+    text-align: center;
+    list-style-type:none;
+}
+.project ul{
+    margin-bottom: 10px;
+}
+.project a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.project a:hover{
+    text-decoration: none;
+    color:white;
+    background-color: #49a5a5;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 25px;
+}
+.tituloProyecto{
+    text-decoration: underline;
+}
+.containerProyecto {
+    background-color: #177c7c;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+}
+.tituloWeb{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 60px;
+}
+#botones p{
+    text-align: center;
+    display: flex;
+    background-color: #177c7c;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.botonEditar{
+    color: beige;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(148, 150, 48);
+
+}
+.botonBorrar{
+    color: beige;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(124, 63, 63);
+}
+.botonBorrar:hover, .botonEditar:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+/*Estilos footer*/
+
+footer img{
+    width: 75px;
+}
+footer img:hover{
+    transform: scale(1.3);
+
+}
+footer p {
+text-align: center;
+align-self: center;
+}
+/*Estilos contacto*/
+.container.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.container.contacto p {
+    margin-top: 0;
+}
+  
+.container.contacto a {
+    margin: 10px 0;
+}
+.container.contacto a:hover {
+    transform: scale(1.3);
+    border-radius: 5px;
+}

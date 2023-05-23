@@ -1,0 +1,14 @@
+<div class="container" *ngIf="projects">
+<h2>Proyectos en BBDD</h2>
+
+<ul>
+    <li *ngFor="let project of projects" class="project">
+        <h3><a [routerLink]="['/proyecto',project._id]">{{project.name}}</a></h3>
+        <p>{{project.category}}</p>
+        <hr style="color: red">
+
+    </li>
+</ul>
+
+
+</div>

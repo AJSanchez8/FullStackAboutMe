@@ -1,0 +1,30 @@
+{
+  "name": "api-rest-node.js",
+  "version": "1.0.0",
+  "description": "apirest del master de JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJSanchez8/ApiRest.git"
+  },
+  "author": "AJ Sanchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AJSanchez8/ApiRest/issues"
+  },
+  "homepage": "https://github.com/AJSanchez8/ApiRest#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
